@@ -9,8 +9,9 @@ CI/CD process <img src="CICD.png" width="500" height="300" />
 - [Table of Contents](#table-of-contents)
   - [1. Introduction ](#1-introduction-)
   - [2. Self-Hosted ](#2-self-hosted-)
-  - [3. Cloud Service Providers ](#3-cloud-service-providers-)
-  - [4. Codes Repositories ](#4-codes-repositories-)
+  - [3. Software as a Service (SaaS) ](#3-software-as-a-service-saas-)
+  - [4. Cloud Service Providers ](#4-cloud-service-providers-)
+  - [5. Codes Repositories ](#5-codes-repositories-)
 
 
 ## 1. Introduction <a name="1"></a>
@@ -61,10 +62,43 @@ CI/CD process <img src="CICD.png" width="500" height="300" />
   * We can configure it on configuration file or web UI.
   * Config files can be XML
   * Plugin support for JSON and YAML formats
-  * 
-## 3. Cloud Service Providers <a name="3"></a>
+## 3. Software as a Service (SaaS) <a name="3"></a>
+* TravisCI
+  * Popular choice for opensource projects
+  * Works exclusively with GitHub projects
+  * Used test pull requests
+  * Configured in .travis.yml
+  * Starts and connects to services
+  * Allows for integration and system testing
+  * Can be extended with third party applications, clients, tools, and libraries
+* Codeship
+  * Basic version: only edit on Web UI, no docker support, shared VMs, ... 
+  * Pro version: Both WebUI and configuration file, Docker support built in, Dedicated VMs, ...
+* CircleCI
+  * Run all OS: linux, windows, macOS
+  * Docker is used for running jobs
+  * Work with cloud or local services.
+  * Command-line for local actions.
+## 4. Cloud Service Providers <a name="4"></a>
+* AWS
+  * CodePipeline: take inputs from many resources such as GitHub, AWS CodeCommit, AmazonECR, AmazoneS3
+    * Stages call actions providers
+      * AWS services
+      * Third-party Actions
+      * Custom Actions
+      * Change configurations in *.yml
+      * Build environment is a Docker container
+  * CodeBuild: Build and test code with continuous scaling
+* Azure:
+  * Continuously Build, Test and Deploy to any platform and cloud
+  * Open-source projects have unlimited build time and 10 parallel jobs for free
+* Google Cloud Platform(GCP)
+  * This is see the previous course about GCP. [DevOps - GCP](https://github.com/ph0123/Learning-Google-Cloud-Developer-and-DevOps-Tools)
+## 5. Codes Repositories <a name="5"></a>
+* GitHub 04_01 folder
+* GitLab CI 04_02 folder
+* Bitbucket Pipeline 04_03 folder
 
-## 4. Codes Repositories <a name="4"></a>
 
 
 
